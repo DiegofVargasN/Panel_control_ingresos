@@ -487,6 +487,7 @@ st.markdown(
     '📊 <b>Area de reporte</b>'
     '</p>',
     unsafe_allow_html=True
+)
 with st.expander("🧩 Descargar Reporte", expanded=False):  # expanded=False para que esté colapsado por defecto
 # 🔹 Título atractivo para la sección
     #st.title("🔄 Automatizar Reporte")
