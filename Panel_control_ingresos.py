@@ -37,6 +37,18 @@ sheet = client.open_by_url(spreadsheet_url).sheet1  # Primera hoja
 data = sheet.get_all_records()
 df = pd.DataFrame(data)
 
+# 🔹 Convertir "FECHA DE REVISION" a formato de fecha
+df["FECHA DE REVISION"] = pd.to_datetime(df["FECHA DE REVISION"], errors="coerce")
+
+# 🔹 Obtener la fecha más reciente
+fecha_maxima = df["FECHA DE REVISION"].max()
+
+# 🔹 Mostrar la fecha máxima en st.info() debajo del título
+if pd.notna(fecha_maxima):
+    st.info(f"📅 Última fecha de revisión en los datos: **{fecha_maxima.strftime('%Y-%m-%d')}**")
+else:
+    st.warning("⚠️ No se encontraron fechas válidas en la columna 'FECHA DE REVISION'.")
+
 # 🔹 Filtros en el lienzo principal (usando st.expander)
 with st.expander("🧩 Mostrar/Ocultar Filtros", expanded=False):  # expanded=False para que esté colapsado por defecto
     st.header("Filtros")
