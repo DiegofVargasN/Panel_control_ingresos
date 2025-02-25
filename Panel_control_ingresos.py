@@ -320,7 +320,7 @@ with center_col:
 #st.header("📊 Observacion Mensual no facturado")
 
 # 🔹 Filtros en el lienzo principal (usando st.expander)
-with st.expander("🧩 Mostrar/Ocultar Grafico de no facturado por mes", expanded=False):  # expanded=False para que esté colapsado por defecto
+with st.expander("🧩 MONTO RECUPERADO POR FECHA DE ENVIO", expanded=False):  # expanded=False para que esté colapsado por defecto
     #st.header("Filtros")
 
     # Selector de tipo de gráfico
@@ -393,7 +393,7 @@ with st.expander("🧩 Mostrar/Ocultar Grafico de no facturado por mes", expande
         st.warning("⚠️ Problema con las fechas: verifique la columna 'FECHA_TS'.")
 
 # 🔹 Filtros en el lienzo principal (usando st.expander)
-with st.expander("🧩 Mostrar/Ocultar Gráfico de Monto Recuperado por Fecha de Envío", expanded=False):  # expanded=False para que esté colapsado por defecto
+with st.expander("🧩 MONTO RECUPERADO POR FECHA DE ENVIO", expanded=False):  # expanded=False para que esté colapsado por defecto
     #st.header("Filtros")
 
     # Selector de tipo de gráfico
