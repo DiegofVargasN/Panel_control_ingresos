@@ -327,7 +327,12 @@ with center_col:
 
 
 
-
+st.markdown(
+    '<p style="background-color:#00111c; color:whithe; padding:10px; border-radius:5px;">'
+    '📊 <b>Area de graficos</b>'
+    '</p>',
+    unsafe_allow_html=True
+)
 # 🔹 Sección NO FACTURADO MENSUAL OBSERVADO
 #st.header("📊 Observacion Mensual no facturado")
 
@@ -477,7 +482,11 @@ with st.expander("🧩 Monto recuperado filtrado por fecha del envio de la obser
     else:
         st.warning("⚠️ Problema con las fechas: verifique la columna 'FECHA ENVIO'.")
 
-
+st.markdown(
+    '<p style="background-color:#00111c; color:whithe; padding:10px; border-radius:5px;">'
+    '📊 <b>Area de reporte</b>'
+    '</p>',
+    unsafe_allow_html=True
 with st.expander("🧩 Descargar Reporte", expanded=False):  # expanded=False para que esté colapsado por defecto
 # 🔹 Título atractivo para la sección
     #st.title("🔄 Automatizar Reporte")
