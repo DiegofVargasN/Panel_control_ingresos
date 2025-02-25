@@ -45,7 +45,7 @@ fecha_maxima = df["FECHA DE REVISION"].max()
 
 # 🔹 Mostrar la fecha máxima en st.info() debajo del título
 if pd.notna(fecha_maxima):
-    st.info(f"📅 Ultima revision al Reporte: **{fecha_maxima.strftime('%d-%m-%Y')}**")
+    st.info(f"📅 Reporte actualizado al: **{fecha_maxima.strftime('%d-%m-%Y')}**")
 else:
     st.warning("⚠️ No se encontraron fechas válidas en la columna 'FECHA DE REVISION'.")
 
