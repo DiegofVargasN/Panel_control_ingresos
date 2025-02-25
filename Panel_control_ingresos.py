@@ -132,7 +132,7 @@ promedio_periodos_no_facturados = df["PERIODOS NO FACTURADO"].mean()
 tarjetas = [
     {"titulo": "Contratos Reportados", "valor": total_contratos, "color": "#FF5733", "hover": "#99311a"},
     {"titulo": "Monto Recuperado", "valor": f"Bs {monto_recuperado:,.2f}", "color": "#2d6d04", "hover": "#1f4a04"},
-    {"titulo": "Monto No Recuperado", "valor": f"Bs {monto_no_recuperado:,.2f}", "color": "#900C3F", "hover": "#4e0923"},
+    {"titulo": "Monto No Recuperado", "valor": f"Bs {monto_no_recuperado:,.2f}", "color": "#510513", "hover": "#4e0923"},
 ]
 
 # 🔹 Generar el CSS dinámico
