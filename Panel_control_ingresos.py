@@ -7,6 +7,7 @@ import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 from io import BytesIO
+import json
 
 # 🔹 Activar modo wide
 st.set_page_config(layout="wide")
@@ -14,12 +15,21 @@ st.set_page_config(layout="wide")
 # 🔹 Agregar título
 st.title("💰Panel de control de Ingresos - Internet y Combazos")
 
-# 🔹 Cargar credenciales de Google
+# 🔹 Configurar el alcance de las credenciales
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = Credentials.from_service_account_file("credenciales.json", scopes=scope)
+
+# 🔹 Cargar las credenciales desde Streamlit Secrets
+# Asegúrate de que en tu secrets.toml esté definido el bloque [google] con la clave "credentials"
+credentials_data = st.secrets["google"]["credentials"]
+credentials_dict = json.loads(credentials_data)
+
+# Crear las credenciales utilizando el diccionario cargado desde los secretos
+creds = Credentials.from_service_account_info(credentials_dict, scopes=scope)
+
+# Autorizar el cliente de Google Sheets
 client = gspread.authorize(creds)
 
-# 🔹 Abre la hoja de cálculo
+# 🔹 Abre la hoja de cálculo por URL
 spreadsheet_url = "https://docs.google.com/spreadsheets/d/1144jZxmPrd9Vt_zTB5ZY4KljHEZ3eFlmJlpPP5uN85g"
 sheet = client.open_by_url(spreadsheet_url).sheet1  # Primera hoja
 
