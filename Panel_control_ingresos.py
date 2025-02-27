@@ -13,7 +13,7 @@ import json
 st.set_page_config(layout="wide")
 
 # 🔹 Agregar título
-st.title("💰Panel de control de Ingresos - Internet y Combazos")
+#st.title("💰Panel de control de Ingresos - Internet y Combazos")
 
 # 🔹 Configurar las credenciales desde Streamlit Secrets
 credentials_data = st.secrets["google"]["credentials"]
@@ -547,9 +547,7 @@ elif option == "PREPAGO":
     st.title("💰 Panel de Control - PREPAGO")
     df = get_sheet_data(1)  # Segunda hoja (Prepago)
 
-    st.title("💰 Panel de Control - PREPAGO")
-    df = get_sheet_data(1)  # Segunda hoja (Prepago)
-    #st.dataframe(df)
+  
 
     
         # 🔹 Convertir "FECHA DE REVISION" a formato de fecha
