@@ -401,7 +401,7 @@ elif option == "POSTPAGO":
     
                 # Configuración del diseño
                 fig.update_layout(
-                    title='📊 Evolución de Tarifa Plan por Fecha de Envío',
+                    title='📊 Monto no recuperado por Fecha de Envío',
                     xaxis_title='Fecha de Envío',
                     yaxis_title='Suma Acumulada (Bs)',
                     template='plotly_white',
