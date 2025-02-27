@@ -863,7 +863,7 @@ elif option == "PREPAGO":
     #st.header("📊 Observacion Mensual no facturado")
 
     # 🔹 Filtros en el lienzo principal (usando st.expander)
-    with st.expander("🧩 Mostrar/Ocultar Grafico de no facturado por mes", expanded=False):  # expanded=False para que esté colapsado por defecto
+    with st.expander("🧩 Monto no recuperado filtrado por fecha del envio de la observacion", expanded=False):  # expanded=False para que esté colapsado por defecto
         #st.header("Filtros")
 
         # Selector de tipo de gráfico
@@ -917,7 +917,7 @@ elif option == "PREPAGO":
 
                 # Configuración del diseño
                 fig.update_layout(
-                    title='📊 Monto no facturado por Fecha de Envío',
+                    title='📊 Monto no recuperado por Fecha de Envío',
                     xaxis_title='Fecha de Envío',
                     yaxis_title='Suma Acumulada (Bs)',
                     template='plotly_white',
