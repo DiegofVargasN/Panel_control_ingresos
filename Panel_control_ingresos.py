@@ -40,7 +40,7 @@ def get_sheet_data(sheet_index):
 
 # 🔹 Mostrar contenido según la opción seleccionada
 if option == "INICIO":
-    st.title("📊 Bienvenido al Panel de Control")
+    st.title("📊💰Panel de control de Ingresos - PostPago y Prepagos")
     st.write("Selecciona una opción en el menú lateral para ver los datos.")
 
 elif option == "POSTPAGO":
