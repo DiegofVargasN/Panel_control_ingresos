@@ -710,7 +710,7 @@ elif option == "PREPAGO":
                 height: 150px;
                 padding: 20px;
                 border-radius: 20px;
-                border: 2px solid #ffffff;
+                border: 4px solid #003049;
             }}
             {css_tarjetas}
 
