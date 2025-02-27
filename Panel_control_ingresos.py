@@ -936,7 +936,7 @@ elif option == "PREPAGO":
             st.warning("⚠️ Problema con las fechas: verifique la columna 'FECHA_TS'.")
 
     # 🔹 Filtros en el lienzo principal (usando st.expander)
-    with st.expander("🧩 Mostrar/Ocultar Gráfico de Monto Recuperado por Fecha de Envío", expanded=False):  # expanded=False para que esté colapsado por defecto
+    with st.expander("🧩 Monto recuperado filtrado por fecha del envio de la observacion", expanded=False):  # expanded=False para que esté colapsado por defecto
         #st.header("Filtros")
 
         # Selector de tipo de gráfico
